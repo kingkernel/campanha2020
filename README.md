@@ -1,2 +1,8 @@
-# campanha2020
-Sistema de gerenciamento de campanha eleitoral. versão 2020
+# :punch: Marrento :angry:
+Framework de aceleração de desenvolvimento para novatos.
+Principais Objetivos:
+* Deixa os caras dos Patterns "fulos" da vida
+* Ajudar o Sobrinho do seu tio a fazer "um site"
+* Facilitar a criação sistemas
+
+
