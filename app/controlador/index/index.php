@@ -8,7 +8,7 @@ class index  extends page {
 	{
 		if (!isset($_SESSION["LOGADO"]))
 		{
-			$campos = ["templatepath"=>"app/visao/templates/cp2020/"];
+			$campos = ["templatepath"=>"/app/visao/templates/cp2020/"];
 
 			$this->loadview("templates.cp2020.index", $campos);
 		} else {
