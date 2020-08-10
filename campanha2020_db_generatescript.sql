@@ -97,7 +97,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `campanha2020`.`userlicence`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `campanha2020`.`userlicence` (
+CREATE TABLE IF NOT EXISTS userlicence (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `emailid` INT(11) NULL DEFAULT NULL,
   `usertype` INT(11) NULL DEFAULT NULL,
