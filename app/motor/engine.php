@@ -58,7 +58,7 @@ function compactada($template){
 };
 function fastload($template){
     $exitfile = preg_replace(array("/\n/", "/\s{2}/", "/\t/", 
-        '/<!--(.*)-->/'), "", $template);
+        '/<!--\w-->/'), "", $template);
     return $exitfile;
 };
 function fontAwesome($pastas){
