@@ -76,8 +76,36 @@ CREATE TABLE IF NOT EXISTS userlicence (
   licencecode TEXT,
   licencetype int,
   PRIMARY KEY (id),
+  unique(licencecode),
   FOREIGN KEY (emailid) REFERENCES usuarios(id),
   FOREIGN KEY (usertype) REFERENCES typeuser(id),
   FOREIGN KEY (licencetype) REFERENCES licencetype(id))
 ENGINE = InnoDB CHARSET = utf8mb4;
+
+create table simpatizantes (
+id int auto_increment,
+licendecode text,
+nome varchar(75),
+cidade estado int,
+cidade int,
+bairro varchar(75),
+logradouro varchar(150),
+numero varchar(15),
+complemento varchar(150),
+hastags text,
+coordenadas text,
+primary key(id)) engine=innodb charset=utf8mb4;
+
+create table tiporecurso
+
+create table recursos(
+id int auto_increment,
+campanha text,
+tiporecurso int,
+nome varchar(45),
+descricao text,
+valor double(6,2)
+primary key(id))engine=innodb charset utf8mb4;
+
+-- https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDlDBpi5f5xdGjAAIJC14_2fIQYkrnpwjs&address=carneiro+leao+9,mogi+cruzes,SP
 
