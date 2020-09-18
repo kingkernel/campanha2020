@@ -26,6 +26,12 @@ CREATE TABLE IF NOT EXISTS cidades (
 ENGINE = InnoDB CHARSET=utf8mb4;
 
 -- -----------------------------------------------------
+-- Table tiposconta
+-- -----------------------------------------------------
+create table tipoconta(
+tipo varchar()
+)engine=innodb charset=utf8mb4;
+-- -----------------------------------------------------
 -- Table usuarios
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -33,6 +39,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
   email VARCHAR(60),
   snhpwd VARCHAR(512),
   ativo BOOLEAN DEFAULT '0',
+  tipoconta int,
   PRIMARY KEY (id),
   UNIQUE(email))
   ENGINE = InnoDB CHARSET = utf8mb4;
@@ -109,3 +116,45 @@ primary key(id))engine=innodb charset utf8mb4;
 
 -- https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDlDBpi5f5xdGjAAIJC14_2fIQYkrnpwjs&address=carneiro+leao+9,mogi+cruzes,SP
 
+create table contas (
+id int auto_increment,
+nome varchar(75),
+email varchar(60),
+estado int
+cidade int,
+unique(email),
+foreign key(estado) references estados(id)
+primary key(id))engine=innodb charset=utf8mb4;
+
+create table candidatura_tipo(
+para varchar(30),
+primary key(para)
+)engine=innodb charset=utf8mb4;
+
+create table candidaturas (
+id int auto_increment,
+candidato int,
+tipocandidatura varchar(30),
+primary key(id),
+foreign key(tipocandidatura) references candidatura_tipo(para)
+)engine=innodb charset=utf8mb4;
+
+
+create table propostascampanha( 
+id int auto_increment,
+proposta text,
+candidatura int,
+primary key(id)
+)engine=innodb charset=utf8mb4;
+
+create table eleitor (
+id int auto_increment,
+nome varchar(75),
+estado int,
+cidade int,
+bairro int,
+logradouro int,
+numero varchar(15),
+complemento varchar(150),
+primary key(id)
+)engine=innodb charset=utf8mb4;
