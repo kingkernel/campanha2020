@@ -6268,7 +6268,7 @@ a.text-gray:hover, a.text-gray:focus {
   .navbar.navbar-ontop {
     background-color: transparent !important;
     padding-top: 20px;
-    box-shadow: none !important; }
+    box-shadow: none !important; } 
   .navbar .nav-item .nav-link {
     font-size: 10px;
     transition: background-color 0.4s;

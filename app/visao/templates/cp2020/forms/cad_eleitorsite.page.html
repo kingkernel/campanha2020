@@ -1,0 +1,118 @@
+@section("templates.cp2020.templatehead")
+@section("templates.cp2020.index_sections.topnav_index")
+<style>
+.navbar.navbar-ontop {
+    background-color: #f96332 !important;
+    padding-top: 20px;
+    box-shadow: none !important;
+}
+</style>
+<link rel="stylesheet" href="/public/css/jquery-ui.min.css">
+<body class="bg-gray">
+  <div class="container">
+    <fieldset style="margin-top: 100px">  
+      <form action="/cadastro/siteeleitor/" method="POST">
+      <p class="text-muted">
+        <legend>CADASTRO DE ELEITOR</legend>
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="" name="nomeeleitor" placeholder="Nome completo" required>
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="now-ui-icons users_single-02 md"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="email" class="form-control" id="" name="emaileleitor" placeholder="E-mail" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="input-group">
+              <select class="form-control" name="estado" id="input-estados" required>
+                <option value="">ESTADO</option>
+                @field{{estados}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="input-group">
+              <select class="form-control" name="cidade" id="input-cidade" required>
+                <option value="">CIDADE</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="" name="bairro" placeholder="BAIRRO" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="" name="rua" placeholder="Logradouro / rua " required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" id="" name="numero" placeholder="Número" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<hr>
+
+<input type="submit" class="btn btn-primary mx-1 my-3 rounded btn-lg" value="Cadastrar-me">
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>    
+  </div>
+</body>
+@section("templates.cp2020.templatefooter")
+<script type="text/javascript" src="/public/js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  $()
+</script>

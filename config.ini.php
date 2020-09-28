@@ -14,7 +14,7 @@ css= offlines
 
 [banco_de_dados]
 driver=mysql
-banco=crmaster
+banco=campanha2020
 usuario=root
 senha=
 host=127.0.0.1

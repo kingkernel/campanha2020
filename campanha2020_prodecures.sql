@@ -5,6 +5,29 @@ delimiter //
 	end //
 delimiter ;
 
+delimiter //
+	create procedure sp_selall_estados()
+	begin
+		select id, estado from estados order by estado;
+	end //
+delimiter ;
+
+delimiter //
+	create procedure sp_sel_cidade(arg_estado int)
+	begin
+		select id, cidade from cidades where estado = arg_estado;
+	end //
+delimiter ;
+
+delimiter /
+	create procedure sp_add_eleitorsite(arg_nome varchar(75), arg_email varchar(60), arg_estado int, arg_cidade int, arg_bairro varchar(75), arg_logradouro varchar(100), arg_numero varchar(15))
+	begin
+		insert into eleitor (nome, email, estado, cidade, bairro, logradouro, numero, cadfor)
+			values (arg_nome, arg_email, arg_estado, arg_cidade, arg_bairro, arg_logradouro, arg_numero, "site");
+	end //
+delimiter ;
+
+
 -- #####################################################################
 
 create database mostra;

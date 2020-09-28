@@ -1,0 +1,40 @@
+  @section("templates.cp2020.templatehead")
+  @section("templates.cp2020.index_sections.topnav_index")
+<style>
+.navbar.navbar-ontop {
+    background-color: #f96332 !important;
+    padding-top: 20px;
+    box-shadow: none !important;
+}
+  </style>
+  <body class="py-5 bg-gray">
+  <div class="py-5" id="recursos">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="my-3">
+            <b>Eleitor <span class="fa fa-handshake-o"></span></b>
+          </h2>
+          <p class="lead mb-4" align="justify" >Quero cadastrar-me e mostrar meu apoio a algum candidato de minha região, e quero ter a liberdade de retirar-me, caso as propostas do mesmo não sejam de meu agrado.</p>
+          <a class="btn btn-primary mx-1 my-3 rounded btn-lg" href="/forms/cadeleitor/">Cadastrar-me como <b><i>Eleitor</i></b></a>
+        </div>
+        <div class="col-md-4">
+          <h2 class="my-3">
+            <b>Liderança <span class="fa fa-signal"></span></b>
+          </h2>
+          <p class="lead mb-4" align="justify" > Sou uma liderança em minha comunidade e quero poder mostrar minha força a candidatos que possam aproveitar meu trabalho, pelos apoiadores que posso trazer a sua campanha.</p>
+          <a class="btn btn-primary mx-1 my-3 rounded btn-lg" href="/cadastro/liderança/" >Cadastrar-me como <b><i>Liderança</i></b></a>
+        </div>
+        <div class="col-md-4">
+          <h2 class="my-3">
+            <b>Candidato <span class="fa fa-handshake-o"></span></b>
+          </h2>
+          <p class="lead mb-4" align="justify" >Gostaria de poder mostrar minhas propostas e deixar os eleitores darem seu apoio a minha candidatura e participar de minhas reuniões, eventos, lives e pesquisas.</p>
+          <a class="btn btn-primary mx-1 my-3 rounded btn-lg" href="/cadastro/candidato/" >Cadastrar-me como <b><i>Candidato</i></b></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  @section("templates.cp2020.templatefooter")

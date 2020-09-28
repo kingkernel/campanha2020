@@ -32,5 +32,25 @@ class ajax {
       echo "ola mundo!";
     }
   }
+  public function loadcidadeinput()
+  {
+    $st = $_POST["st"]; 
+    $sql = "call sp_sel_cidade(".$st.")";
+    $query = queryDb($sql);
+    while ($dados = $query->fetch(PDO::FETCH_ASSOC))
+      {
+        echo "<option value=".$dados["id"].">".$dados["cidade"]."</option>";
+      }
+  }
+  public function loadbairroinput()
+  {
+    $brr = $_POST["brr"]; 
+    $sql = "call sp_sel_bairro(".$st.")";
+    $query = queryDb($sql);
+    while ($dados = $query->fetch(PDO::FETCH_ASSOC))
+      {
+        echo "<option value=".$dados["id"].">".$dados["cidade"]."</option>";
+      }
+  }
 }
 ?>

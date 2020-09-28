@@ -139,7 +139,6 @@ primary key(id),
 foreign key(tipocandidatura) references candidatura_tipo(para)
 )engine=innodb charset=utf8mb4;
 
-
 create table propostascampanha( 
 id int auto_increment,
 proposta text,
@@ -152,9 +151,14 @@ id int auto_increment,
 nome varchar(75),
 estado int,
 cidade int,
-bairro int,
+bairro varchar(75),
 logradouro int,
 numero varchar(15),
 complemento varchar(150),
-primary key(id)
+cpf bigint(11),
+email varchar(60),
+accountlogin boolean default 0,
+cadfor varchar(150),
+primary key(id),
+unique (cpf)
 )engine=innodb charset=utf8mb4;
