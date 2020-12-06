@@ -160,5 +160,6 @@ email varchar(60),
 accountlogin boolean default 0,
 cadfor varchar(150),
 primary key(id),
-unique (cpf)
+unique (cpf),
+unique (email)
 )engine=innodb charset=utf8mb4;
